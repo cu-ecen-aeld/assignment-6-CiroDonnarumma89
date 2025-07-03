@@ -1,0 +1,24 @@
+From e8bfed373921095e6f6cb8c295e6c4a70e0cbce0 Mon Sep 17 00:00:00 2001
+From: Ciro Donnarumma <ciro.donnarumma89@gmail.com>
+Date: Thu, 3 Jul 2025 14:02:29 +0200
+Subject: [PATCH] Build only misc
+
+---
+ Makefile | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 7b08c49..671fa7e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,6 @@
+ 
+-SUBDIRS =  misc-progs misc-modules \
+-           skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
+-	   pci usb\
+-	   sbull snull short
++SUBDIRS =  misc-modules
++
+ 
+ all: subdirs
+ 

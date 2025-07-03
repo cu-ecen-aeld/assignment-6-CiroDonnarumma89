@@ -1,0 +1,22 @@
+From 78ed1d7f092247ce6210736dcde0d657b46aeb64 Mon Sep 17 00:00:00 2001
+From: Ciro Donnarumma <ciro.donnarumma89@gmail.com>
+Date: Thu, 3 Jul 2025 14:00:45 +0200
+Subject: [PATCH] Update module load
+
+---
+ misc-modules/module_load | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/misc-modules/module_load b/misc-modules/module_load
+index 843d23a..d178aa1 100755
+--- a/misc-modules/module_load
++++ b/misc-modules/module_load
+@@ -22,7 +22,7 @@ else
+ fi
+ 
+ echo "Load our module, exit on failure"
+-insmod /lib/modules/6.6.18/updates/$module.ko $* || exit 1
++insmod /lib/modules/$(uname -r)/extra/$module.ko $* || exit 1
+ echo "Get the major number (allocated with allocate_chrdev_region) from /proc/devices"
+ major=$(awk "\$2==\"$module\" {print \$1}" /proc/devices)
+ if [ ! -z ${major} ]; then
