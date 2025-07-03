@@ -1,0 +1,24 @@
+From dffeedb9b14e011f0794299424acfc106e265bc1 Mon Sep 17 00:00:00 2001
+From: Ciro Donnarumma <ciro.donnarumma89@gmail.com>
+Date: Wed, 2 Jul 2025 15:06:59 +0200
+Subject: [PATCH] Makefile for yocto
+
+---
+ Makefile | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 7b08c49..c0f2d6b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,6 @@
+ 
+-SUBDIRS =  misc-progs misc-modules \
+-           skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
+-	   pci usb\
+-	   sbull snull short
++SUBDIRS =  misc-modules \
++           scull
+ 
+ all: subdirs
+ 

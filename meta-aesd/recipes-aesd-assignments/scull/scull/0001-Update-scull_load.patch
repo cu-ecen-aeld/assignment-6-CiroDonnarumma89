@@ -1,0 +1,22 @@
+From e1f1f4cb3fd2592bea282a3b7cdb466127f3477d Mon Sep 17 00:00:00 2001
+From: Ciro Donnarumma <ciro.donnarumma89@gmail.com>
+Date: Thu, 3 Jul 2025 11:32:05 +0200
+Subject: [PATCH] Update scull_load
+
+---
+ scull/scull_load | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scull/scull_load b/scull/scull_load
+index 00686a1..8267745 100755
+--- a/scull/scull_load
++++ b/scull/scull_load
+@@ -14,7 +14,7 @@ fi
+ 
+ # invoke insmod with all arguments we got
+ # and use a pathname, as insmod doesn't look in . by default
+-insmod /lib/modules/6.6.18/updates/$module.ko $* || exit 1
++insmod /lib/modules/$(uname -r)/extra/$module.ko $* || exit 1
+ 
+ # retrieve major number
+ major=$(awk "\$2==\"$module\" {print \$1}" /proc/devices)
