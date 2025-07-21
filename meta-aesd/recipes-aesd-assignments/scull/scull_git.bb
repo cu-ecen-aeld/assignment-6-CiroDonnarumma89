@@ -6,6 +6,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-7-CiroDonnarumma89.git;p
            file://0001-Makefile-for-yocto.patch \
            file://scull-start-stop \
            file://0001-Update-scull_load.patch \
+           file://0001-Build-only-scull.patch \
            "
 
 

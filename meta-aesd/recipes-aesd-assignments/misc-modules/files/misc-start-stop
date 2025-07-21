@@ -1,0 +1,15 @@
+#! /bin/sh
+case "$1" in
+    start)
+        echo "Starting scull module"
+        module_load faulty
+        ;;
+    stop)
+        echo "Stopping scull module"
+        module_unload faulty
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
+exit 0
