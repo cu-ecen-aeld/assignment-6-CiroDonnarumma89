@@ -10,7 +10,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-7-CiroDonnarumma89.git;p
 
 
 PV = "1.0+git${SRCPV}"
-SRCREV = "57f9afd44c95dad11c71b94986067fdf6e955006"
+SRCREV = "92c2e8d18849f79c060790ba02b93ba77fb3329b"
 
 S = "${WORKDIR}/git"
 

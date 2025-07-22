@@ -8,7 +8,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-CiroDonnaru
 
 PV = "1.0+git${SRCPV}"
 # TODO: set to reference a specific commit hash in your assignment repo
-SRCREV = "009a829515c5fff267331c34c4fd6a346b6e2674"
+SRCREV = "75b28f6ef445e10d7435e6ca5afb4f299092f31a"
 
 # This sets your staging directory based on WORKDIR, where WORKDIR is defined at 
 # https://docs.yoctoproject.org/ref-manual/variables.html?highlight=workdir#term-WORKDIR
@@ -22,6 +22,8 @@ FILES:${PN} += "${bindir}/aesdsocket"
 # TODO: customize these as necessary for any libraries you need for your application
 # (and remove comment)
 #TARGET_LDFLAGS += "-pthread -lrt"
+EXTRA_OEMAKE = "'CFLAGS=-DUSE_AESD_CHAR_DEVICE ${CFLAGS}'"
+
 
 do_configure () {
 	:
